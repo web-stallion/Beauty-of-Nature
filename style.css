@@ -1,0 +1,162 @@
+/* :: CSS VARIABLES SECTION :: STARTS HERE :: */
+
+:root {
+	/* :: FONT FAMILY :: */
+	--special-fontFamily: "Cinzel", serif;
+	--content-fontFamily: "Encode Sans", sans-serif;
+
+	/* :: BACKGROUND COLOR :: */
+	--special-bgColor: rgba(116, 38, 70, 1);
+	--dark-bgColor: rgba(38, 13, 61, 1);
+	--light-bgColor: rgba(54, 59, 116, 0.7);
+	--navLink-bgColor: rgba(129, 59, 88, 0.8);
+	--table-bgColor: rgba(192, 175, 208, 1);
+
+	/* :: HOVER COLORS :: */
+	--hover-bgColor: rgba(118, 75, 147, 0.8);
+	--hover-text: rgba(224, 238, 238, 1);
+
+	/* :: TEXT COLOR :: */
+	--special-text: rgba(199, 157, 215, 1);
+	--heading-text: rgba(69, 24, 110, 0.8);
+	--light-text: rgba(237, 232, 241, 1);
+}
+
+/* :: CSS VARIABLES SECTION :: ENDS HERE :: */
+
+/* :: DEFAULT STYLES RESET :: STARTS HERE :: */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* :: DEFAULT STYLES RESET :: ENDS HERE :: */
+
+/* :: CSS STYLES :: BODY SECTION :: STARTS HERE :: */
+
+body {
+	font-family: var(--content-fontFamily);
+	background-color: var(--light-bgColor);
+}
+
+/* :: CSS STYLES :: BODY SECTION :: ENDS HERE :: */
+
+/* :: CSS STYLES :: HEADER SECTION :: STARTS HERE :: */
+#header-section {
+	font-family: var(--special-fontFamily);
+	background-color: var(--special-bgColor);
+}
+
+#logo {
+	color: var(--special-text);
+	text-shadow: 0 1px 1px #4d4d4d;
+}
+
+.nav-link {
+	transition: background-color 1s ease, color 1s ease;
+	color: #777;
+	background-color: var(--navLink-bgColor);
+}
+
+.nav-link:hover {
+	background-color: var(--hover-bgColor);
+	color: var(--hover-text);
+}
+
+/* :: CSS STYLES :: HEADER SECTION :: ENDS HERE :: */
+
+/* :: CSS STYLES :: GALLERY SECTION :: STARTS HERE :: */
+
+#gallery h1,
+#about h2 {
+	color: var(--heading-text);
+}
+
+.row img {
+	width: 94%;
+	border: 3px solid var(--special-bgColor);
+	transition: border-radius 1s ease;
+	cursor: pointer;
+	padding: 0;
+}
+
+.row img:hover {
+	border-radius: 50%;
+	box-shadow: 0 1px 3px var(--heading-text);
+}
+
+/* :: CSS STYLES :: GALLERY SECTION :: ENDS HERE :: */
+
+/* :: CSS STYLES :: ABOUT SECTION :: STARTS HERE :: */
+
+table {
+	font-size: 70%;
+	max-width: 95%;
+	text-transform: uppercase;
+	background-color: var(--table-bgColor);
+	color: #0f0f0f !important;
+	border: 3px solid #2f2f2f !important;
+}
+
+table thead {
+	background-color: #0f0f0f;
+	color: var(--light-text);
+}
+
+table th,
+table td {
+	padding-left: 2.5% !important;
+}
+
+table tbody tr:hover {
+	background-color: rgba(54, 59, 116, 0.7) !important;
+	color: #0f0f0f !important;
+}
+
+/* :: CSS STYLES :: ABOUT SECTION :: ENDS HERE :: */
+
+/* :: MEDIA QUERIES :: LARGE DEVICES ( MIN-WIDTH: 992px ) :: */
+
+@media screen and (min-width: 992px) {
+	.row img {
+		max-width: 31%;
+		transition: border-radius 1s ease;
+		cursor: pointer;
+	}
+
+	.row img:hover {
+		border-radius: 50%;
+	}
+
+	table {
+		font-size: 100%;
+	}
+
+	table th,
+	table td {
+		padding-left: 3% !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.row img {
+		max-width: 47%;
+		transition: border-radius 1s ease;
+		cursor: pointer;
+	}
+
+	.row img:hover {
+		border-radius: 50%;
+	}
+
+	table {
+		font-size: 85%;
+	}
+
+	table th,
+	table td {
+		padding-left: 3% !important;
+	}
+}
